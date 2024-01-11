@@ -1,0 +1,66 @@
+CREATE DATABASE QuanLyQuanCafe
+GO
+USE QuanLyQuanCafe
+GO
+-- Food (món ?n)
+-- Table (Bàn)
+-- FoodCategory (Danh m?c)
+-- Account (
+-- Bill
+-- BillInfo 
+
+CREATE TABLE BanAn 
+(
+	Id INT IDENTITY PRIMARY KEY,
+	TenBan NVARCHAR(100) NOT NULL DEFAULT N'Bàn ch?a có tên',
+	TrangThai NVARCHAR(100) NOT NULL DEFAULT N'Tr?ng'	-- Tr?ng || Có ng??i
+)
+GO
+CREATE TABLE taikhoan 
+(
+	Id INT IDENTITY PRIMARY KEY,
+	TenDangNhap NVARCHAR(100),	
+	TenHienThi NVARCHAR(100) NOT NULL DEFAULT N'Ch?a Có Tên',
+	MatKhau NVARCHAR(1000) NOT NULL DEFAULT 0,
+	Quyen INT NOT NULL  DEFAULT 0 -- 1: admin && 0: staff
+)
+GO
+CREATE TABLE DanhMuc
+(
+	Id INT IDENTITY PRIMARY KEY,
+	TenDanhMuc NVARCHAR(100) NOT NULL DEFAULT N'Ch?a có tên',
+)
+GO
+CREATE TABLE MonAn
+(
+	Id INT IDENTITY PRIMARY KEY,
+	TenMonAn NVARCHAR(100) NOT NULL DEFAULT N'Ch?a có tên',
+	IdDanhMuc INT NOT NULL,
+	Gia FLOAT NOT NULL DEFAULT 0
+	
+	FOREIGN KEY (IdDanhMuc) REFERENCES dbo.DanhMuc(Id)
+
+)
+GO
+CREATE TABLE HOADON 
+(
+	Id INT IDENTITY PRIMARY KEY,
+	ThoiGianVao DATE,
+	ThoiGianRa Date,
+	IdBanan INT NOT NULL,
+	TrangThai INT NOT NULL DEFAULT 0 -- 1: ?ã thanh toán && 0: ch?a thanh toán
+	
+	FOREIGN KEY (IdBanan) REFERENCES dbo.BanAn(Id)
+)
+GO
+CREATE TABLE ChiTietHoaDon
+(
+	Id INT IDENTITY PRIMARY KEY,
+	IdHoaDon INT NOT NULL,
+	IdMonAn INT NOT NULL,
+	SoLuong INT NOT NULL DEFAULT 0
+	
+	FOREIGN KEY (IdHoaDon) REFERENCES dbo.HoaDon(Id),
+	FOREIGN KEY (IdMonAn) REFERENCES dbo.MonAn(Id)
+)
+GO
