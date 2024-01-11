@@ -1,0 +1,37 @@
+D:\Quan Ly Quan CaFe\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\net8.0-windows\QuanLyQuanCafe.exe
+D:\Quan Ly Quan CaFe\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\net8.0-windows\QuanLyQuanCafe.deps.json
+D:\Quan Ly Quan CaFe\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\net8.0-windows\QuanLyQuanCafe.runtimeconfig.json
+D:\Quan Ly Quan CaFe\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\net8.0-windows\QuanLyQuanCafe.dll
+D:\Quan Ly Quan CaFe\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\net8.0-windows\QuanLyQuanCafe.pdb
+D:\Quan Ly Quan CaFe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\QuanLyQuanCafe.DangNhap.resources
+D:\Quan Ly Quan CaFe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\QuanLyQuanCafe.csproj.GenerateResource.cache
+D:\Quan Ly Quan CaFe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\QuanLyQuanCafe.GeneratedMSBuildEditorConfig.editorconfig
+D:\Quan Ly Quan CaFe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\QuanLyQuanCafe.AssemblyInfoInputs.cache
+D:\Quan Ly Quan CaFe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\QuanLyQuanCafe.AssemblyInfo.cs
+D:\Quan Ly Quan CaFe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\QuanLyQuanCafe.csproj.CoreCompileInputs.cache
+D:\Quan Ly Quan CaFe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\QuanLyQuanCafe.dll
+D:\Quan Ly Quan CaFe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\refint\QuanLyQuanCafe.dll
+D:\Quan Ly Quan CaFe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\QuanLyQuanCafe.pdb
+D:\Quan Ly Quan CaFe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\QuanLyQuanCafe.genruntimeconfig.cache
+D:\Quan Ly Quan CaFe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\ref\QuanLyQuanCafe.dll
+D:\Quan Ly Quan CaFe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\QuanLyQuanCafe.TrangChu.resources
+D:\QL Cafe\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\net8.0-windows\QuanLyQuanCafe.exe
+D:\QL Cafe\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\net8.0-windows\QuanLyQuanCafe.deps.json
+D:\QL Cafe\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\net8.0-windows\QuanLyQuanCafe.runtimeconfig.json
+D:\QL Cafe\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\net8.0-windows\QuanLyQuanCafe.dll
+D:\QL Cafe\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\net8.0-windows\QuanLyQuanCafe.pdb
+D:\QL Cafe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\QuanLyQuanCafe.DangNhap.resources
+D:\QL Cafe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\QuanLyQuanCafe.TrangChu.resources
+D:\QL Cafe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\QuanLyQuanCafe.csproj.GenerateResource.cache
+D:\QL Cafe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\QuanLyQuanCafe.GeneratedMSBuildEditorConfig.editorconfig
+D:\QL Cafe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\QuanLyQuanCafe.AssemblyInfoInputs.cache
+D:\QL Cafe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\QuanLyQuanCafe.AssemblyInfo.cs
+D:\QL Cafe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\QuanLyQuanCafe.csproj.CoreCompileInputs.cache
+D:\QL Cafe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\QuanLyQuanCafe.sourcelink.json
+D:\QL Cafe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\QuanLyQuanCafe.dll
+D:\QL Cafe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\refint\QuanLyQuanCafe.dll
+D:\QL Cafe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\QuanLyQuanCafe.pdb
+D:\QL Cafe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\QuanLyQuanCafe.genruntimeconfig.cache
+D:\QL Cafe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\ref\QuanLyQuanCafe.dll
+D:\QL Cafe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\QuanLyQuanCafe.ThongTinCaNhan.resources
+D:\QL Cafe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\QuanLyQuanCafe.Admin.resources
