@@ -779,7 +779,7 @@
             panel23.Name = "panel23";
             panel23.Size = new Size(402, 462);
             panel23.TabIndex = 6;
-            panel23.Paint += panel23_Paint;
+//            panel23.Paint += panel23_Paint;
             // 
             // btndatlaimk
             // 
@@ -789,7 +789,7 @@
             btndatlaimk.TabIndex = 4;
             btndatlaimk.Text = "Đặt Lại Mật Khẩu";
             btndatlaimk.UseVisualStyleBackColor = true;
-            btndatlaimk.Click += btndatlaimk_Click;
+//            btndatlaimk.Click += btndatlaimk_Click;
             // 
             // panel25
             // 

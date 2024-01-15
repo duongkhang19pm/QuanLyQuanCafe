@@ -1,4 +1,6 @@
+
 namespace QuanLyQuanCafe
+
 {
     internal static class Program
     {

@@ -35,3 +35,11 @@ D:\QL Cafe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\QuanLyQuanCafe
 D:\QL Cafe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\ref\QuanLyQuanCafe.dll
 D:\QL Cafe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\QuanLyQuanCafe.ThongTinCaNhan.resources
 D:\QL Cafe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\QuanLyQuanCafe.Admin.resources
+D:\QL Cafe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\QuanLyQuanCafe.csproj.AssemblyReference.cache
+D:\QL Cafe\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+D:\QL Cafe\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+D:\QL Cafe\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+D:\QL Cafe\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+D:\QL Cafe\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\QL Cafe\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\QL Cafe\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net8.0-windows\QuanLyQuanCafe.csproj.CopyComplete

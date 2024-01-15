@@ -1,7 +1,9 @@
-﻿using System;
+﻿using QuanLyQuanCafe.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,14 +17,28 @@ namespace QuanLyQuanCafe
         public Admin()
         {
             InitializeComponent();
+            LoadTaiKhoanList();
+            LoadMonAnList();
+            LoadDanhMucList();
         }
-
-        private void panel23_Paint(object sender, PaintEventArgs e)
+        void LoadMonAnList()
         {
-            
+            string query = "select * from MonAn";
 
+            dtgvMonAn.DataSource = DataProvider.Instance.ExecuteQuery(query);
         }
+        void LoadDanhMucList()
+        {
+            string query = "select * from DanhMuc";
 
+            dtgvDanhMuc.DataSource = DataProvider.Instance.ExecuteQuery(query);
+        }
+        void LoadTaiKhoanList()
+        {
+            string query = "EXEC dbo.USP_GetAccountByUserName @tenDangnhap";
+           
+            dtgvTK.DataSource = DataProvider.Instance.ExecuteQuery(query, new object[] {"A1"});
+        }    
         private void btndatlaimk_Click(object sender, EventArgs e)
         {
             ThongTinCaNhan thongtincanhan = new ThongTinCaNhan();
