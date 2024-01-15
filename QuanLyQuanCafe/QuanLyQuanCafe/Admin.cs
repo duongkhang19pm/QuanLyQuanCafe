@@ -1,4 +1,5 @@
 ﻿using QuanLyQuanCafe.DAO;
+using QuanLyQuanCafe.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,22 +18,9 @@ namespace QuanLyQuanCafe
         public Admin()
         {
             InitializeComponent();
-            LoadTaiKhoanList();
-            LoadMonAnList();
-            LoadDanhMucList();
+           
         }
-        void LoadMonAnList()
-        {
-            string query = "select * from MonAn";
-
-            dtgvMonAn.DataSource = DataProvider.Instance.ExecuteQuery(query);
-        }
-        void LoadDanhMucList()
-        {
-            string query = "select * from DanhMuc";
-
-            dtgvDanhMuc.DataSource = DataProvider.Instance.ExecuteQuery(query);
-        }
+     
         void LoadTaiKhoanList()
         {
             string query = "EXEC dbo.USP_GetAccountByUserName @tenDangnhap";

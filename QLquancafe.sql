@@ -13,14 +13,14 @@ CREATE TABLE BanAn
 (
 	Id INT IDENTITY PRIMARY KEY,
 	TenBan NVARCHAR(100) NOT NULL DEFAULT N'Bàn ch?a có tên',
-	TrangThai NVARCHAR(100) NOT NULL DEFAULT N'Tr?ng'	-- Tr?ng || Có ng??i
+	TrangThai NVARCHAR(100) NOT NULL DEFAULT N'Trong'	-- Tr?ng || Có ng??i
 )
 GO
 CREATE TABLE taikhoan 
 (
 	Id INT IDENTITY PRIMARY KEY,
 	TenDangNhap NVARCHAR(100),	
-	TenHienThi NVARCHAR(100) NOT NULL DEFAULT N'Ch?a Có Tên',
+	TenHienThi NVARCHAR(100) NOT NULL DEFAULT N'ch?a Có Tên',
 	MatKhau NVARCHAR(1000) NOT NULL DEFAULT 0,
 	Quyen INT NOT NULL  DEFAULT 0 -- 1: admin && 0: staff
 )
@@ -28,13 +28,13 @@ GO
 CREATE TABLE DanhMuc
 (
 	Id INT IDENTITY PRIMARY KEY,
-	TenDanhMuc NVARCHAR(100) NOT NULL DEFAULT N'Ch?a có tên',
+	TenDanhMuc NVARCHAR(100) NOT NULL DEFAULT N'ch?a có tên',
 )
 GO
 CREATE TABLE MonAn
 (
 	Id INT IDENTITY PRIMARY KEY,
-	TenMonAn NVARCHAR(100) NOT NULL DEFAULT N'Ch?a có tên',
+	TenMonAn NVARCHAR(100) NOT NULL DEFAULT N'ch?a có tên',
 	IdDanhMuc INT NOT NULL,
 	Gia FLOAT NOT NULL DEFAULT 0
 	
@@ -64,3 +64,20 @@ CREATE TABLE ChiTietHoaDon
 	FOREIGN KEY (IdMonAn) REFERENCES dbo.MonAn(Id)
 )
 GO
+Declare @i int = 1
+while @i <= 10
+begin 
+	insert dbo.BanAn (TenBan) Values (N'Bàn ' + CAST(@i as nvarchar(100)))
+	set @i = @i +1 
+end
+ 
+select * from dbo.BanAn 
+go
+Create Proc USP_GetBanAnList
+as select * from dbo.BanAn
+go
+
+exec dbo.USP_GetBanAnList
+DELETE  from BanAn 
+update dbo.BanAn set TrangThai = N'Tr?ng' where TrangThai = N'Tr?ng'
+update dbo.BanAn set TrangThai = N'Có ng??i' where id = 25

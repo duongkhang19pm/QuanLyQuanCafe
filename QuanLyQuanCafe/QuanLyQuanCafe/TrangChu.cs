@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QuanLyQuanCafe.DAO;
+using QuanLyQuanCafe.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,8 +17,32 @@ namespace QuanLyQuanCafe
         public TrangChu()
         {
             InitializeComponent();
+            LoadBanAn();
         }
 
+        void LoadBanAn()
+        {
+            List<BanAn> bananlist = BanAnDAO.Instance.LoadBanAnList();
+            foreach (BanAn item in bananlist)
+            {
+                Button btn = new Button() { Width = BanAnDAO.BanWidth, Height = BanAnDAO.BanHeight };
+                btn.Text = item.TenBanan + Environment.NewLine + item.TrangThai;
+                switch(item.TrangThai)
+                {
+                    case "Trống":
+                        btn.BackColor = Color.Aqua;
+                        break;
+                    default:
+                        btn.BackColor = Color.Yellow;
+                        break;
+
+
+                }
+                flpBan.Controls.Add(btn);
+
+            }
+
+        }
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
