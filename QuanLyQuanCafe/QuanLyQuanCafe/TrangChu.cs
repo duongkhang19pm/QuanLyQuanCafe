@@ -27,6 +27,9 @@ namespace QuanLyQuanCafe
             {
                 Button btn = new Button() { Width = BanAnDAO.BanWidth, Height = BanAnDAO.BanHeight };
                 btn.Text = item.TenBanan + Environment.NewLine + item.TrangThai;
+                btn.Click += btn_click;
+                btn.Tag = item;
+
                 switch(item.TrangThai)
                 {
                     case "Trống":
@@ -43,6 +46,26 @@ namespace QuanLyQuanCafe
             }
 
         }
+        void ShowHoaDon(int id)
+        {
+            lsvHoadon.Items.Clear();
+            List<Menu> listHDChiTiet = MenuDAO.Instance.GetMenubyBanAn(id);
+            foreach (Menu item in listHDChiTiet)
+            {
+                ListViewItem lsvitem = new ListViewItem(item.TenMonan.ToString());
+                lsvitem.SubItems.Add(item.SoLuong.ToString());
+                lsvitem.SubItems.Add(item.DonGia.ToString());
+                lsvitem.SubItems.Add(item.ThanhTien.ToString());
+                lsvHoadon.Items.Add(lsvitem);
+            }
+        }
+        private void btn_click(object? sender, EventArgs e)
+        {
+            int BanID = ((sender as Button).Tag as BanAn).ID;
+
+            ShowHoaDon(BanID);
+        }
+
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();

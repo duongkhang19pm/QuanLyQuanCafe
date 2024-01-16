@@ -81,3 +81,23 @@ exec dbo.USP_GetBanAnList
 DELETE  from BanAn 
 update dbo.BanAn set TrangThai = N'Tr?ng' where TrangThai = N'Tr?ng'
 update dbo.BanAn set TrangThai = N'Có ng??i' where id = 25
+-- them bill
+
+select * from dbo.HOADON 
+Insert dbo.HOADON(ThoiGianVao,ThoiGianRa,IdBanan,TrangThai)values(GETDATE(),null,25,0)
+Insert dbo.HOADON(ThoiGianVao,ThoiGianRa,IdBanan,TrangThai)values(GETDATE(),GETDATE(),28,1)
+Insert dbo.HOADON(ThoiGianVao,ThoiGianRa,IdBanan,TrangThai)values(GETDATE(),GETDATE(),23,1)
+-- them chi tiet bill
+
+Insert dbo.ChiTietHoaDon(IdHoaDon,IdMonAn,SoLuong)values(2,1,4)
+Insert dbo.ChiTietHoaDon(IdHoaDon,IdMonAn,SoLuong)values(2,2,1)
+Insert dbo.ChiTietHoaDon(IdHoaDon,IdMonAn,SoLuong)values(2,4,2)
+Insert dbo.ChiTietHoaDon(IdHoaDon,IdMonAn,SoLuong)values(3,1,4)
+Insert dbo.ChiTietHoaDon(IdHoaDon,IdMonAn,SoLuong)values(4,2,4)
+select * from dbo.ChiTietHoaDon 
+
+Select * from dbo.HoaDon where IdBanan = 28 and trangthai = 1
+Select * from dbo.ChiTietHoaDon where IdHoaDon = 2
+
+Select mon.TenMonAn, ct.SoLuong , mon.Gia ,mon.Gia * ct.SoLuong as thanhtien  from dbo.ChiTietHoaDon as ct, dbo.HoaDon as hd,  dbo.MonAn as mon 
+where ct.IdHoaDon = hd.Id and ct.IdMonAn = mon.Id and hd.IdBanan = 25

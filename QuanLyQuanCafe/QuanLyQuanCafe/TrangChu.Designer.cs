@@ -35,6 +35,8 @@
             đăngXuấtToolStripMenuItem = new ToolStripMenuItem();
             panel2 = new Panel();
             lsvHoadon = new ListView();
+            columnHeader1 = new ColumnHeader();
+            columnHeader2 = new ColumnHeader();
             panel3 = new Panel();
             cbChuyenBan = new ComboBox();
             btnChuyenBan = new Button();
@@ -47,6 +49,8 @@
             cbMonAn = new ComboBox();
             cbDanhMuc = new ComboBox();
             flpBan = new FlowLayoutPanel();
+            columnHeader3 = new ColumnHeader();
+            columnHeader4 = new ColumnHeader();
             menuStrip1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -103,11 +107,23 @@
             // 
             // lsvHoadon
             // 
+            lsvHoadon.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
+            lsvHoadon.GridLines = true;
             lsvHoadon.Location = new Point(3, 3);
             lsvHoadon.Name = "lsvHoadon";
             lsvHoadon.Size = new Size(337, 395);
             lsvHoadon.TabIndex = 0;
             lsvHoadon.UseCompatibleStateImageBehavior = false;
+            lsvHoadon.View = View.Details;
+            // 
+            // columnHeader1
+            // 
+            columnHeader1.Text = "Tên Món";
+            columnHeader1.Width = 100;
+            // 
+            // columnHeader2
+            // 
+            columnHeader2.Text = "Số Lượng";
             // 
             // panel3
             // 
@@ -218,6 +234,16 @@
             flpBan.Size = new Size(797, 575);
             flpBan.TabIndex = 5;
             // 
+            // columnHeader3
+            // 
+            columnHeader3.Text = "Đơn Giá";
+            columnHeader3.Width = 80;
+            // 
+            // columnHeader4
+            // 
+            columnHeader4.Text = "Thành Tiền";
+            columnHeader4.Width = 100;
+            // 
             // TrangChu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -263,5 +289,9 @@
         private Button btnGiamGia;
         private ComboBox cbChuyenBan;
         private Button btnChuyenBan;
+        private ColumnHeader columnHeader1;
+        private ColumnHeader columnHeader2;
+        private ColumnHeader columnHeader3;
+        private ColumnHeader columnHeader4;
     }
 }
