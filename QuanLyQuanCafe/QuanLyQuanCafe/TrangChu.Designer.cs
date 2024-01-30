@@ -37,7 +37,10 @@
             lsvHoadon = new ListView();
             columnHeader1 = new ColumnHeader();
             columnHeader2 = new ColumnHeader();
+            columnHeader3 = new ColumnHeader();
+            columnHeader4 = new ColumnHeader();
             panel3 = new Panel();
+            txtTongtien = new TextBox();
             cbChuyenBan = new ComboBox();
             btnChuyenBan = new Button();
             nmGiamGia = new NumericUpDown();
@@ -49,8 +52,6 @@
             cbMonAn = new ComboBox();
             cbDanhMuc = new ComboBox();
             flpBan = new FlowLayoutPanel();
-            columnHeader3 = new ColumnHeader();
-            columnHeader4 = new ColumnHeader();
             menuStrip1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -65,7 +66,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { adminToolStripMenuItem, thôngTinCáNhânToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1158, 28);
+            menuStrip1.Size = new Size(1214, 28);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -102,16 +103,16 @@
             panel2.Controls.Add(lsvHoadon);
             panel2.Location = new Point(803, 117);
             panel2.Name = "panel2";
-            panel2.Size = new Size(343, 408);
+            panel2.Size = new Size(411, 408);
             panel2.TabIndex = 2;
             // 
             // lsvHoadon
             // 
             lsvHoadon.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
             lsvHoadon.GridLines = true;
-            lsvHoadon.Location = new Point(3, 3);
+            lsvHoadon.Location = new Point(3, -8);
             lsvHoadon.Name = "lsvHoadon";
-            lsvHoadon.Size = new Size(337, 395);
+            lsvHoadon.Size = new Size(408, 413);
             lsvHoadon.TabIndex = 0;
             lsvHoadon.UseCompatibleStateImageBehavior = false;
             lsvHoadon.View = View.Details;
@@ -119,14 +120,26 @@
             // columnHeader1
             // 
             columnHeader1.Text = "Tên Món";
-            columnHeader1.Width = 100;
+            columnHeader1.Width = 150;
             // 
             // columnHeader2
             // 
             columnHeader2.Text = "Số Lượng";
+            columnHeader2.Width = 80;
+            // 
+            // columnHeader3
+            // 
+            columnHeader3.Text = "Đơn Giá";
+            columnHeader3.Width = 80;
+            // 
+            // columnHeader4
+            // 
+            columnHeader4.Text = "Thành Tiền";
+            columnHeader4.Width = 200;
             // 
             // panel3
             // 
+            panel3.Controls.Add(txtTongtien);
             panel3.Controls.Add(cbChuyenBan);
             panel3.Controls.Add(btnChuyenBan);
             panel3.Controls.Add(nmGiamGia);
@@ -134,8 +147,18 @@
             panel3.Controls.Add(btnThanhToan);
             panel3.Location = new Point(806, 531);
             panel3.Name = "panel3";
-            panel3.Size = new Size(343, 86);
+            panel3.Size = new Size(396, 86);
             panel3.TabIndex = 3;
+            // 
+            // txtTongtien
+            // 
+            txtTongtien.Location = new Point(203, 42);
+            txtTongtien.Name = "txtTongtien";
+            txtTongtien.ReadOnly = true;
+            txtTongtien.Size = new Size(93, 27);
+            txtTongtien.TabIndex = 8;
+            txtTongtien.Text = "0";
+            txtTongtien.TextAlign = HorizontalAlignment.Right;
             // 
             // cbChuyenBan
             // 
@@ -156,7 +179,7 @@
             // 
             // nmGiamGia
             // 
-            nmGiamGia.Location = new Point(129, 42);
+            nmGiamGia.Location = new Point(103, 43);
             nmGiamGia.Name = "nmGiamGia";
             nmGiamGia.Size = new Size(94, 27);
             nmGiamGia.TabIndex = 5;
@@ -164,7 +187,7 @@
             // 
             // btnGiamGia
             // 
-            btnGiamGia.Location = new Point(129, 3);
+            btnGiamGia.Location = new Point(103, 4);
             btnGiamGia.Name = "btnGiamGia";
             btnGiamGia.Size = new Size(94, 33);
             btnGiamGia.TabIndex = 4;
@@ -173,7 +196,7 @@
             // 
             // btnThanhToan
             // 
-            btnThanhToan.Location = new Point(249, 8);
+            btnThanhToan.Location = new Point(302, 8);
             btnThanhToan.Name = "btnThanhToan";
             btnThanhToan.Size = new Size(94, 62);
             btnThanhToan.TabIndex = 3;
@@ -188,12 +211,12 @@
             panel4.Controls.Add(cbDanhMuc);
             panel4.Location = new Point(806, 42);
             panel4.Name = "panel4";
-            panel4.Size = new Size(337, 69);
+            panel4.Size = new Size(396, 69);
             panel4.TabIndex = 4;
             // 
             // nmSlMon
             // 
-            nmSlMon.Location = new Point(293, 5);
+            nmSlMon.Location = new Point(349, 4);
             nmSlMon.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
             nmSlMon.Name = "nmSlMon";
             nmSlMon.Size = new Size(44, 27);
@@ -203,12 +226,13 @@
             // 
             // btnThemMon
             // 
-            btnThemMon.Location = new Point(193, 3);
+            btnThemMon.Location = new Point(240, 3);
             btnThemMon.Name = "btnThemMon";
             btnThemMon.Size = new Size(94, 62);
             btnThemMon.TabIndex = 2;
             btnThemMon.Text = "Thêm Món";
             btnThemMon.UseVisualStyleBackColor = true;
+            btnThemMon.Click += btnThemMon_Click;
             // 
             // cbMonAn
             // 
@@ -225,6 +249,7 @@
             cbDanhMuc.Name = "cbDanhMuc";
             cbDanhMuc.Size = new Size(184, 28);
             cbDanhMuc.TabIndex = 0;
+            cbDanhMuc.SelectedIndexChanged += cbDanhMuc_SelectedIndexChanged;
             // 
             // flpBan
             // 
@@ -234,21 +259,11 @@
             flpBan.Size = new Size(797, 575);
             flpBan.TabIndex = 5;
             // 
-            // columnHeader3
-            // 
-            columnHeader3.Text = "Đơn Giá";
-            columnHeader3.Width = 80;
-            // 
-            // columnHeader4
-            // 
-            columnHeader4.Text = "Thành Tiền";
-            columnHeader4.Width = 100;
-            // 
             // TrangChu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1158, 629);
+            ClientSize = new Size(1214, 629);
             Controls.Add(flpBan);
             Controls.Add(panel4);
             Controls.Add(panel3);
@@ -262,6 +277,7 @@
             menuStrip1.PerformLayout();
             panel2.ResumeLayout(false);
             panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)nmGiamGia).EndInit();
             panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)nmSlMon).EndInit();
@@ -293,5 +309,6 @@
         private ColumnHeader columnHeader2;
         private ColumnHeader columnHeader3;
         private ColumnHeader columnHeader4;
+        private TextBox txtTongtien;
     }
 }

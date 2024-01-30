@@ -29,7 +29,15 @@ namespace QuanLyQuanCafe.DAO
 
             }    
             return listHDChiTiet;
-        }    
+        }
+
+
+        public void ThemHoaDonChiTiet(int idHoaDon, int idMonAn, int soLuong)
+        {
+            DataProvider.Instance.ExecuteNonQuery("USP_ThemHoaDonChiTiet @idHoaDon , @idMonAn , @soLuong", new object[] { idHoaDon, idMonAn, soLuong });
+
+            
+        }
 
     }
 }

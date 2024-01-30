@@ -101,3 +101,51 @@ Select * from dbo.ChiTietHoaDon where IdHoaDon = 2
 
 Select mon.TenMonAn, ct.SoLuong , mon.Gia ,mon.Gia * ct.SoLuong as thanhtien  from dbo.ChiTietHoaDon as ct, dbo.HoaDon as hd,  dbo.MonAn as mon 
 where ct.IdHoaDon = hd.Id and ct.IdMonAn = mon.Id and hd.IdBanan = 25
+Select * from dbo.MonAn where IdDanhMuc = 1
+
+CREATE PROC USP_ThemHoaDon
+@IdBanan int 
+as 
+begin
+	INSERT dbo.HOADON
+	(ThoiGianVao,
+	ThoiGianRa,
+	IdBanan,
+	TrangThai
+	)
+	values
+	(GETDATE(),
+	null,
+	@IdBanan,
+	0
+	)
+end
+go
+
+
+AlTER PROC USP_ThemHoaDonChiTiet
+@idHoaDon int,@idMonAn int, @soLuong int 
+as 
+begin
+		DECLARE @isExitsHoaDonChiTiet int
+		DECLARE @slMonan int = 1
+		SELECT @isExitsHoaDonChiTiet = id , @slMonan = b.SoLuong
+		FROM dbo.ChiTietHoaDon as b
+		WHERE IdHoaDon = @idHoaDon and IdMonAn=@idMonAn
+		if (@isExitsHoaDonChiTiet > 0)
+		begin 
+			DECLARE @Newsl int = @slMonan + @soLuong 
+			if (@Newsl > 0)
+				UPDATE dbo.ChiTietHoaDon set SoLuong = @slMonan + @soLuong where IdMonAn = @idMonAn
+			else 
+				DELETE dbo.ChiTietHoaDon where IdHoaDon = @idHoaDon and IdMonAn = @idMonAn
+		end
+		else
+		begin
+			Insert dbo.ChiTietHoaDon(IdHoaDon,IdMonAn,SoLuong)
+			values(@idHoaDon,@idMonAn,@soLuong)
+		end
+end
+go
+
+SELECT MAX(id) FROM dbo.HOADON 

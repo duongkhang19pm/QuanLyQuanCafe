@@ -32,5 +32,21 @@ namespace QuanLyQuanCafe.DAO
             return -1;
 
         }
+        public void ThemHoaDon(int id)
+        {
+            DataProvider.Instance.ExecuteNonQuery("exec USP_ThemHoaDon @IdBanan", new object[] { id });
+        }
+        public int GetMaxIdHoaDon()
+        {
+            try
+            {
+                return (int)DataProvider.Instance.ExecuteScalar("SELECT MAX(id) FROM dbo.HOADON");
+            }
+           catch
+            {
+                return 1;
+            }
+
+        }
     }
 }

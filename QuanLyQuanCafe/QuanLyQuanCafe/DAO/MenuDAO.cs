@@ -22,7 +22,7 @@ namespace QuanLyQuanCafe.DAO
         public List<Menu> GetMenubyBanAn(int id)
         {
             List<Menu> listmenu = new List<Menu>();
-            string query = "Select mon.TenMonAn, ct.SoLuong , mon.Gia ,mon.Gia * ct.SoLuong as thanhtien  from dbo.ChiTietHoaDon as ct, dbo.HoaDon as hd,  dbo.MonAn as mon \r\nwhere ct.IdHoaDon = hd.Id and ct.IdMonAn = mon.Id and hd.IdBanan = "+ id;
+            string query = "Select mon.TenMonAn, ct.SoLuong , mon.Gia ,mon.Gia * ct.SoLuong as thanhtien  from dbo.ChiTietHoaDon as ct, dbo.HoaDon as hd,  dbo.MonAn as mon \r\nwhere ct.IdHoaDon = hd.Id and ct.IdMonAn = mon.Id and hd.TrangThai = 0 and hd.IdBanan = " + id;
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow item in data.Rows)
             {
